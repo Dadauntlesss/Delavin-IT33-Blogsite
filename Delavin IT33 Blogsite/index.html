@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.A.D Personal Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>S.A.D Personal Blog</h1>
+      <p>IT33 Sean A. Delavin's Blog for IT 372</p>
+    </header>
+
+    <main>
+     
+      <article>
+        <h2>Lessons I Learned from Information Security Risk Assessment Fieldwork</h2>
+        <time class="date">September 4, 2026</time>
+        
+        <p>When you study Information Assurance and Security in a classroom setting, concepts like risk scores, impact ratings, single points of failure, and business continuity feel very clean and academic. You sit in front of a spreadsheet, multiply numbers together, and write down neat solutions. But step out of the textbook and walk into a real operational workplace to conduct actual risk assessment fieldwork, and reality hits you pretty quickly. Recently, our group had the opportunity to evaluate an organization’s physical and informational security environment. That fieldwork completely changed my perspective on how security works in practice versus how it looks on paper.</p>
+
+        <p>Going to the organization was actually a little nerve wracking for us. Even though we had our official request letter properly checked out and endorsed by our instructor, we were still pretty nervous just walking up and asking to enter and observe the place. As college students, stepping into a formal workplace to evaluate how they run things can feel intimidating. Obviously, I can't say anything direct about where we went or what specific organization it was, but it was really interesting to see the inner workings of an office environment, even if our observation wasn't deeply technical or intrusive. The interview part ended up being much lighter than we expected too, mostly because we personally knew the employee we spoke with. Because of that rapport, all of our questions were smooth, inline with our assessment form, and completely non invasive.</p>
+
+        <p>To respect the privacy and security of the organization, I won't be naming the entity or exposing specific internal vulnerabilities. Instead, I want to reflect on what our fieldwork taught us about the real world gaps between existing controls, human habits, and system dependability, and how our group reasoned through risk evaluation and treatment using the core concepts from our Information Assurance and Security class.</p>
+
+        <h3>Context and Scope of the Fieldwork Assessment</h3>
+        <p>Our assessment targeted key operational units responsible for day to day administrative tasks, legal documentation, and planning operations, alongside common areas used by employees and visitors every day. The main objective was to evaluate physical asset handling, record keeping practices, workstation security, and overall office environment risks. Going in, we knew that physical security and information security are deeply intertwined. A server running top tier software security is still vulnerable if the physical room hosting it isn't properly safeguarded, and confidential records are only as secure as the cabinet or desk holding them.</p>
+
+        <p>During our walkthroughs and discussions, we assessed ten distinct risk scenarios across administrative, legal, and planning environments. We tracked assets ranging from unlocked employee workstations, server enclosures, and physical filing cabinets to official printed documents, common biometric timekeeping devices, and office shredding setups.</p>
+
+        <h3>How We Reasoned Through Risk Identification and Analysis</h3>
+        <p>To analyze the data collected during our fieldwork, our group relied on a standard qualitative risk matrix. We evaluated each scenario by determining its Impact (ranging from Minor to Moderate) and its Probability (evaluating likelihood on a standardized weight scale). Multiplying these factors gave us a quantitative Risk Score, categorized into Low and Moderate risk levels.</p>
+
+        <p>Across the ten scenarios we evaluated, eight came out as Moderate risk scores, while two were rated as Low risk. Interestingly, every single risk scenario shared a baseline probability of being "Possible." This uniform likelihood highlighted an important realization for us: small operational lapses happen constantly in a busy working environment. Whether it is an employee walking away from a desktop without locking the screen or a confidential file sitting on a printer tray, these aren't rare anomalies, they are everyday tendencies.</p>
+
+        <p>What struck us most during the evaluation process was how heavily the organization relied on physical perimeter controls. For 80% of the identified risks, the initial management strategy was simply to "Accept" the risk. The primary reasoning was that because entry into the building or specific office suites was controlled, internal assets were considered inherently safe. However, as students analyzing this through an information assurance lens, relying on perimeter security as a single point of failure felt like a major vulnerability.</p>
+
+        <h3>Bridging Classroom Lessons with Fieldwork Insights</h3>
+        <p>Our coursework emphasizes that system dependability is not an assumed trait; it is the trustworthiness of a computing system that allows reliance to be justifiably placed on the service it delivers. As noted in recent literature on system reliability, dependability is not a single property but a cluster of them, including reliability, availability, safety, integrity, and maintainability (Djambazova, 2026). Above all, dependability must be a design decision made early in the lifecycle, not a band aid repair applied late when something breaks.</p>
+
+        <p>During our fieldwork, we noticed that many existing controls treated security as an afterthought. For instance, accepting the risk of unlocked employee computers or shared workstations because "the office door is restricted" ignores the principles of defense in depth and insider threat management. If an unauthorized person passes the entrance, or if an internal user misbehaves, there are zero secondary barriers to protect sensitive data on unattended screens.</p>
+
+        <p>Another major theme from our fieldwork was the handling of physical records. Relying solely on single physical copies of crucial case records or planning documents stored on high shelves or unlocked cabinets introduces severe single points of failure. If a physical disaster occurs, such as a fire, water leak, or theft, the availability and integrity of that information are instantly destroyed. Protecting information requires looking beyond the physical room holding the paper and focusing on data redundancy.</p>
+
+        <h3>Refining Recommendations from an IAS Student Perspective</h3>
+        <p>When formulating recommendations, our group had to ground our thinking in what we learned as Information Assurance and Security students rather than making administrative demands. We realized that security recommendations shouldn't just be about buying expensive gear or waiting for top management deadlines; they should focus on smart, structural improvements that build resilience directly into daily operations.</p>
+
+        <p>First, we recommended establishing layered digital controls to support physical perimeter security. Simple, zero cost policy adjustments, like enforcing automated 5 minute screen lock policies across all workstations and requiring individual user accounts on shared office machines, ensure clear audit trails and reduce reliance on manual user discipline.</p>
+
+        <p>Second, to address physical records management, we recommended implementing robust data redundancy practices. Important physical documents should be systematically digitized. For on premises digital storage, implementing data replication or RAID configurations on server equipment ensures high availability and fault tolerance. As digital volume grows, organizations can also adopt erasure coding for cloud or distributed backups, which encodes and distributes data across nodes to maintain fault tolerance while cutting down on the heavy storage overhead required by pure replication (Cui & Wang, 2025).</p>
+
+        <p>Finally, our fieldwork highlighted the necessity of Business Continuity Management (BCM). Business continuity is advance planning, nobody writes a good recovery plan while a crisis is actively unfolding. By conducting a Business Impact Analysis (BIA) to identify time sensitive operations, the organization can establish clear Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO). Connecting technology continuity, emergency response, and operational resilience into one integrated system ensures that critical operations remain functional even during unexpected disruptions.</p>
+
+        <h3>References</h3>
+        <p>Cui, L., & Wang, X. (2025). Efficient erasure coding strategies for distributed cloud storage architectures. <i>Journal of Systems Architecture and Security</i>, 148, 103–115.</p>
+        <p>Djambazova, M. (2026). <i>Frameworks for system dependability and adjustable reliability in enterprise architectures</i>. Academic Press.</p>
+      </article>
+
+      <article>
+        <h2>Reflection on the Security Vulnerabilities of the Student Made Platform</h2>
+        <time class="date">August 3, 2026</time>
+        
+        <p>Honestly, I can see myself making these mistakes. You are 48 hours into a weekend coding. You just want the app to work before the judges walk by. So you prompt ChatGPT or Claude, it spews out 200 lines of pristine looking JavaScript, you hit copy paste and boom the button works, the server returns 200 OK. You win a minor prize, collect a tiny gift card and go home to sleep. End of story, right? Except for three students at a local uni here it was not the end. It was the start of a total security trainwreck.</p>
+        
+        <p>What started as a 72 hour hackathon project for student orgs quietly turned into actual production software. Within a month, over a dozen campus groups were using it. And without anyone actually deciding to launch, this fragile little app was suddenly holding real, sensitive data like full names, student numbers, phone numbers, GCash payment screenshots, uploaded ID photos, and private chats. Then a student tried changing the number in the URL, moving from profile 1048 to profile 1049 and was instantly staring at a complete stranger's profile, contact info, and uploaded ID.</p>
+        
+        <p>Look, as a 3rd year student who is still trying to figure out backend dev myself, I really feel for them. They were not trying to be shady, they were just young devs trying to solve a real campus problem fast. But, looking at how it was set up under the hood, it was a complete technical disaster waiting to happen that could actually harm people.</p>
+
+        <h3>What Went Wrong</h3>
+        <p>If you have ever let an AI write your backend code without double checking it, you already know what happened here. AI is awesome at giving you stuff that runs, but it is pretty terrible at writing stuff that is secure unless you specifically ask it to.</p>
+        
+        <p>They just wanted the app to run, and in the process, they broke some core secure design principles we keep hearing about in class.</p>
+
+        <h4>1. The URL trick, or Insecure Direct Object References</h4>
+        <p>Changing the ID in the URL showed someone else's account. This violated the principles of Fail Safe Defaults and Complete Mediation. The AI wrote a basic route that checked if you were logged in, but completely forgot to check who was logged in. It just assumed that if you typed profile 1049, you were allowed to see it. It defaulted to letting everyone in instead of blocking by default, which breaks Fail Safe Defaults, and it did not double check permissions on the request, which breaks Complete Mediation.</p>
+
+        <h4>2. DB credentials sitting on public GitHub</h4>
+        <p>The database password and payment API key were literally in plain text in an early commit. This violated the principle of Open Design. Hardcoding keys locally during a hackathon happens to all of us, but pushing them to GitHub is an oof moment. Open Design basically says your app should not rely on people not finding your source code to stay safe, because eventually someone will find it.</p>
+
+        <h4>3. God mode DB access and no HTTPS</h4>
+        <p>The app was running over plain HTTP and using a database user that had full admin permissions. This violated Least Privilege and Defense in Depth. Running plain HTTP on a college Wi-Fi network is scary because anyone sniffing traffic can see everything. Plus, giving the backend full admin access to the database means if one part breaks, the attacker gets access to the whole database instead of just what that route needs, which breaks Least Privilege.</p>
+
+        <h4>4. Raw error traces on screen</h4>
+        <p>Triggering a backend crash showed full code stack traces on screen, which violated Fail Safe Defaults. When an error happens, showing raw server code on the screen gives potential hackers a free blueprint of how your server is set up. When a faculty adviser was shown the URL trick, the app was pulled offline that afternoon. Luckily, no malicious breach seems to have happened, but the exposure was super scary.</p>
+
+        <h3>How I Would Try to Fix This as a 3rd Year</h3>
+        <p>If I were asked to help fix this, I would split it into quick emergency fixes and then better long term changes once we have time to study it properly.</p>
+
+        <p><strong>Phase 1: Emergency containment</strong><br>
+        First off, keep the app offline. Do not rush to put it back up. Assume every secret pushed to GitHub is leaked, so change the database passwords, reset payment API keys, and log out all active user sessions. Making the repo private is not enough because the keys are still in the commit history, so we would need to use tools like <code>git filter repo</code> or just start a clean repo after wiping secrets to strip them out completely, which restores Open Design. Add a simple <code>if</code> check in the backend to make sure the logged in user ID actually matches the profile ID being requested before sending back data, which restores Complete Mediation. Finally, set up free SSL through Cloudflare or Let's Encrypt so data is not traveling in plain text across campus Wi-Fi, which restores Defense in Depth.</p>
+
+        <p><strong>Phase 2: Long term fixes when we have time</strong><br>
+        Once the panic dies down, we would need to redo the architecture a bit. Instead of profile 1048, we should use random string IDs like UUIDs so people cannot just guess numbers in the URL. Student IDs and GCash receipts should not sit in a public images folder, so they should be stored in a private cloud bucket, and the app should only generate temporary 5 minute links when an authorized user asks to view them. Lastly, create a separate database user that can only read or write specific tables so it does not have full admin rights over everything, which restores Least Privilege.</p>
+
+        <h3>Rushing Isn’t Responsible and RA 10173</h3>
+        <p>Building stuff fast with AI is super cool, but there is a big difference between a project you show off at a weekend hackathon and an app holding real people's private data. When you ask AI for backend code, it gives you whatever works quickest. It does not care about security unless you specifically ask for it. If we just copy, paste, and deploy without checking, that is on us as developers.</p>
+
+        <p>Also, we have to remember our legal responsibilities under RA No. 10173, or the Data Privacy Act of 2012. Student numbers, phone numbers, and uploaded IDs are sensitive personal information. Under Section 20 of the DPA, anyone building apps that collect this data is legally required to put proper security measures in place. If an actual breach happened here, the uni and the developers could have faced serious trouble with the National Privacy Commission.</p>
+
+        <p>It is really sad because these students had awesome initiative and built something people actually wanted to use. But shipping fast cannot be an excuse when real people trust us with their privacy. We definitely need to learn to slow down and check our code before hitting deploy.</p>
+      </article>
+
+      <article>
+        <h2>Building the Blog with Plain HTML</h2>
+        <time class="date">August 3, 2026</time>
+        <p>Keeping things simple is often the best approach for a personal blog. No complicated build steps required just plain HTML and CSS.</p>
+      </article>
+
+      <article>
+        <h2>Hello World</h2>
+        <time class="date">August 3, 2026</time>
+        <p>Welcome to my first blog. This is my very first post deployed on Vercel.</p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Personal Blog. Hosted on Vercel.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
